@@ -70,7 +70,7 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1 == str2) {
+  if (str1.length == str2.length) {
     return true; 
   } else {
     return false;
@@ -210,7 +210,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  return lado ** 4;
+  return lado + lado + lado + lado;
 }
 
 
@@ -237,7 +237,7 @@ function esVocal(letra){
   //Escribe tu código aquí
   if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
     return "Es vocal";
-  } else if (length.letra > 1) { 
+  } else if (letra.length > 1) { 
     return "Dato incorrecto"; 
   } else {
     return "Dato incorrecto";
