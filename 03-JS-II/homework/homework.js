@@ -47,7 +47,7 @@ function saludo(idioma) {
     case "aleman": return "Guten Tag!";
     case "mandarin": return "Ni Hao!";
     case "ingles": return "Hello!";
-    default: "Hola!";
+    default: return "Hola!";
   }
 }
 
@@ -59,12 +59,12 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
- switch (color){
-  case "blue": console.log("This is blue");
-  case "red": console.log("This is red");
-  case "green": console.log("This is green");
-  case "orange": console.log("This is orange");
-  default: "Color not found";
+ switch (color) {
+  case "blue": return "This is blue";
+  case "red": return "This is red";
+  case "green": return "This is green";
+  case "orange": return "This is orange";
+  default: return "Color not found";
  }
 }
 
@@ -83,7 +83,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero < 20) { 
+  if (numero < 50) { 
     if (numero >= 20)
       return true;
         
@@ -130,15 +130,17 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if (num1,num2,num3 < 0) {
-    return "error";
-  }  else if (num1 > num2,num3 && num1 > 0) {
-      return "Numero 1 es mayor y positivo";
-  }  else if (num3 > num1,num2) {
-      num3++;
-      return num3;
-  }  else {
-      return false;
+  if (num2 && num3 && num1 < 0) {
+    return "Hay negativos";
+  } else if (num3 || num2 || num1 == 0) {
+    return "Error";
+  } else if (num1 > num2 && num3) {
+    return "Número 1 es mayor y positivo";
+  } else if (num3 > num1 && num2) {
+      num3++
+      return num3
+  } else {
+    return false
   }
   }
   
@@ -170,17 +172,20 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
+  //Escribe tu código aquí  
+  let tabla = 6; 
   for (i = 0; i <= 10; i++) {
-    return 6 * i;
+    resultado = [];
+    num = tabla * i;
+    resultado.push(num);
   }
-  
+  return resultado;
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if (numero.leght === 3) {
+  if (numero.leght == 3) {
     return true;
   } else {
     false;
