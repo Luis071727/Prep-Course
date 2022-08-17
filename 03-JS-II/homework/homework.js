@@ -17,9 +17,9 @@ function mayoriaDeEdad(edad) {
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
   if (edad >= 18) {
-    return "Allowed"
+    return "Allowed";
   } else {
-    return "Not allowed"
+    return "Not allowed";
   }
 }
   
@@ -32,7 +32,7 @@ function conection(status) {
   switch (status) {
     case 1: return"Online";
     case 2: return "Away";
-    default: return "Offline"
+    default: return "Offline";
   }
 }
 
@@ -47,7 +47,7 @@ function saludo(idioma) {
     case "aleman": return "Guten Tag!";
     case "mandarin": return "Ni Hao!";
     case "ingles": return "Hello!";
-    default: "Hola!"
+    default: "Hola!";
   }
 }
 
@@ -60,11 +60,11 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   switch (color) {
-    case "blue": "This is blue";
-    case "red": "This is red";
-    case "green": "This is green";
-    case "orange": "This is orange";
-    default: "Color nor found"
+    case "blue":"This is blue";
+    case "red":"This is red";
+    case "green":"This is green";
+    case "orange":"This is orange";
+    default:"Color not found";
   }
 }
 
@@ -110,11 +110,11 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (numero % 3 === 0 && numero % 5 === 0){
+  if (numero % 3 == 0 && numero % 5 == 0){
     return "fizzbuzz";
-  } else if (numero % 5 === 0) {
+  } else if (numero % 5 == 0) {
     return "buzz";
-  } else if (numero % 3 === 0 ) {
+  } else if (numero % 3 == 0 ) {
     return "fizz";
   } else {
     return numero;
@@ -128,15 +128,20 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  switch (num1,num2,num3){
-    case (num1 > num2 && num3) && Math.sign(num1) == 1:  return "Número 1 es mayor y positivo";
-    case Math.sign(num1,num2,num3) == -1: return "Hay negativos"
-    case num3 > num1 && num2: return num3 =+ 1;
-    case num3 > num1 && num2: return num3;  
-    case (num1,num2,num3) == 0: return "Error"
-    default: false;
+  if (num1 > num2 && num3 && 0) {
+    console.log("Numero 1 es mayor y positivo");
+    
+  } else if (num1 || num2 || num3 < 0) {
+    console.log("Hay negativos"); 
+  } else if (num3 > num1 && num2) {
+    num3++;
+    console.log(num3);
+  } else {
+    return false;
   }
-}
+  
+  }
+  
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
@@ -144,34 +149,56 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  if (n <=1) return false;
+  for (var i = 2; i <= n-1; i++)
+      if (n % i == 0) return false ;
+  return true;
+  
 }
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
+  if (valor === true) {
+    return "Soy verdadero";
+  } else {
+    return false;
+  }
 }
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
+  for (i = 0; i <= 10; i++) {
+    return 6 * i;
+  }
   
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  if (numero.leght === 3) {
+    return true;
+  } else {
+    false;
+  }
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let count = 0;
+  do { console.log(numero);
+    numero + 5;
+    count = count + 1
+  
+  } while (count <= 8 );
 }
-
+ 
 
 // No modificar nada debajo de esta línea
 // --------------------------------
