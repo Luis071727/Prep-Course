@@ -77,7 +77,7 @@ function arrayContiene(array, elemento) {
   // Tu código:
   var item = array[i];
   for(let i = 0; i < array.length; i++){
-    if(elemento === item[i]){
+    if(item[i] === elemento){
       return true;
     }
   } 
