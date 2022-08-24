@@ -77,7 +77,7 @@ function arrayContiene(array, elemento) {
   // Tu código:
   for (let i = 0; i < array.length; i++){
     var item = array[i];
-    if (elemento === item)
+    if (elemento === item[i])
       return true
     
   } 
@@ -262,7 +262,7 @@ function continueStatement(numero) {
     }
       numero = numero + 2;
       count = i;
-      array.push(numero)
+      array.push(numero);
       
   }
   return array
