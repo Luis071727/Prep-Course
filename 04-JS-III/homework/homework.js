@@ -77,8 +77,10 @@ function arrayContiene(array, elemento) {
   // Tu código:
   for (let i = 0; i < array.length; i++){
     var item = array[i];
-    if (elemento === item[i])
+    if (elemento === item[i]){
       return true
+    }
+      
     
   } 
   
@@ -113,13 +115,20 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  var acc = 1
-    for (let i =0; i < arguments.length; i++) {
-        acc = acc * arguments[i];
-        return acc
-    }
-    return 0;
-    
+  // var acc = 1
+  //   for (let i =0; i < arguments.length; i++) {
+  //       acc = acc * arguments[i];
+  //       return acc
+  //   }
+  //   return 0;
+     if(arguments.length === 0){
+      return 0;
+     }
+     var producto = arguments[0]
+     for(var i = 1; i < arguments.length; i++){
+      producto = producto * arguments[i];
+     }
+     return producto;
 }
 
 
