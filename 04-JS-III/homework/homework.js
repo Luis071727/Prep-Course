@@ -116,8 +116,10 @@ function multiplicarArgumentos() {
   var acc = 1
     for (let i =0; i < arguments.length; i++) {
         acc = acc * arguments[i];
+        return acc
     }
-    return acc
+    return 0;
+    
 }
 
 
@@ -255,13 +257,11 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
   var array = [];
-  var count = 0
   for(var i = 1; i <= 10; i++){
-    if(count === 5){
+    if(i === 5){
       continue;
     }
       numero = numero + 2;
-      count = i;
       array.push(numero);
       
   }
